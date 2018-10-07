@@ -3,7 +3,7 @@ from decimal import Decimal
 import random
 import datetime
 
-with open("/your/own/path/temp_data.csv") as myfile:
+with open("/your/own/path/temp_data.csv", newline=' ') as myfile:
     data = csv.reader(myfile, delimiter=',')
     temps = []
     for i in data:
