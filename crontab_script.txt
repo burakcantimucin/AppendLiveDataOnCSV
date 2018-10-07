@@ -1,0 +1,7 @@
+For Python2
+
+* * * * * /usr/bin/python /your/own/path/generate_data.py >> ~/cron.log2>&1
+
+For Python3
+
+* * * * * /usr/bin/python3 /your/own/path/generate_data.py >> ~/cron.log2>&1
