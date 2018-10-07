@@ -3,7 +3,7 @@ from decimal import Decimal
 import random
 import datetime
 
-with open("/home/burakcan/Desktop/BitirmeProjesi/temp_data.csv") as myfile:
+with open("/your/own/path/temp_data.csv") as myfile:
     data = csv.reader(myfile, delimiter=',')
     temps = []
     for i in data:
@@ -23,7 +23,7 @@ newTemp = round(random.uniform(int(minTemp), int(maxTemp)), digit)
 
 now = datetime.datetime.now()
 
-with open("/home/burakcan/Desktop/BitirmeProjesi/temp_data.csv", "a") as csvfile:
+with open("/your/own/path/temp_data.csv", "a", newline=' ') as csvfile:
     fieldnames = ["day", "month", "year", "hour", "minute", "temp"]
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
     writer.writerow({"day": now.day, "month": now.month, "year": now.year,
